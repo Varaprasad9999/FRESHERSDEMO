@@ -1,0 +1,44 @@
+
+### READ Students
+GET http://localhost:4004/myservice/Students
+
+### CREATE Students
+POST http://localhost:4004/myservice/Students
+Content-Type: application/json
+
+{
+      "name": "trail",
+      "rollno": 2
+}
+
+### REMOVE Student
+DELETE http://localhost:4004/myservice/Students(ID='ecb21864-1068-497a-b1b6-998da4d485f7')
+
+### UPDATE Entire Record
+PUT http://localhost:4004/myservice/Students(ID='cfdeef6e-3fd0-49cc-86e0-5701cbc4b784')
+Content-Type: application/json
+
+{
+      "name": "Name & Rollno change",
+      "rollno": 4
+}
+
+### UPDATE a Column in the Record
+PATCH http://localhost:4004/myservice/Students(ID='cfdeef6e-3fd0-49cc-86e0-5701cbc4b784')
+Content-Type: application/json
+
+{
+      "name": "Just name change"
+}
+
+### Function call
+GET http://localhost:4004/myservice/getStudentsCountWithGivenName(name='prasad')
+
+### Action call
+POST http://localhost:4004/myservice/resetRollNoTo1
+Content-Type: application/json
+
+{
+    "ID": "cfdeef6e-3fd0-49cc-86e0-5701cbc4b784"
+}
+
